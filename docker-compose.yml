@@ -1,6 +1,6 @@
 services:
   paymybuddy-db:
-    image: mysql:8.0
+    image: localhost:5000/paymybuddy-db:1.0
     container_name: paymybuddy-db
     restart: always
     environment:
@@ -20,8 +20,7 @@ services:
       start_period: 30s
 
   paymybuddy-backend:
-    build: .
-    image: paymybuddy-backend
+    image: localhost:5000/paymybuddy-backend:1.0
     container_name: paymybuddy-backend
     restart: always
     environment:
